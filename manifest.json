@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "COMASA - Madurez",
-  "short_name": "COMASA Madurez",
+  "name": "COMASA - Madurez 2",
+  "short_name": "COMASA Madurez 2",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
