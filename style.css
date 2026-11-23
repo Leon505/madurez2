@@ -533,24 +533,34 @@ input[type="number"]::-webkit-inner-spin-button {
     color: white;
 }
 
-/* Distribución de resultados en pantallas pequeñas */
+
+/* Ajustes para pantallas pequeñas */
 @media screen and (max-width: 480px) {
 
+    /* Ocultar encabezado y campos de Otros Factores */
+    .section-header,
+    .factors-grid {
+        display: none !important;
+    }
+
+    /* Mantener visible NOTA */
+    .nota-container {
+        display: flex;
+    }
+
+    /* Mostrar solamente tres resultados */
     .results-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* El tercer resultado termina la primera fila */
-    .result-item:nth-child(3) {
-        border-right: none;
+    /* Ocultar Rendimiento */
+    .results-grid .result-item:nth-child(4) {
+        display: none;
     }
 
-    /* Rendimiento ocupa la tercera columna de la segunda fila */
-    .result-item:nth-child(4) {
-        grid-column: 3;
-        border-top: 1px solid var(--border-color);
+    /* Ajustar borde del último indicador */
+    .results-grid .result-item:nth-child(3) {
         border-right: none;
     }
 
 }
-
