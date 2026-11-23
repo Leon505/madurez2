@@ -532,3 +532,25 @@ input[type="number"]::-webkit-inner-spin-button {
     background-color: #0d4a22; /* Verde COMASA */
     color: white;
 }
+
+/* Distribución de resultados en pantallas pequeñas */
+@media screen and (max-width: 480px) {
+
+    .results-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* El tercer resultado termina la primera fila */
+    .result-item:nth-child(3) {
+        border-right: none;
+    }
+
+    /* Rendimiento ocupa la tercera columna de la segunda fila */
+    .result-item:nth-child(4) {
+        grid-column: 3;
+        border-top: 1px solid var(--border-color);
+        border-right: none;
+    }
+
+}
+
